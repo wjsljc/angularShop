@@ -1,0 +1,39 @@
+.form{
+	height: auto;margin-top: 10px;
+}
+.table{
+	margin-top: 15px;
+	text-align: center;
+}
+.input_info{
+	padding: 10px 0;
+}
+.search_info,.search_info:focus,.search_info:hover{
+	background-color: white;
+	text-align: left;
+	cursor: auto;
+}
+.searchBtn{
+	margin: 0 10px;
+}
+
+.showType{
+	margin: 0 10px;
+	border: 2px solid #A6C8FF;
+}
+.sortBy{
+	margin: 0 5px;
+	padding: 5px;
+	cursor: pointer;
+}
+.active{
+	background-color: #F5EAAD;
+}
+.buyNum{
+	display: inline-block;
+	width: 50px;
+}
+.getinfo-tr i.fa{
+	padding: 5px 10px;
+	cursor: pointer;
+}

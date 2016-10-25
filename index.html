@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="shop">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="Description" content="我的购物之旅"/>	
+		<meta name="Keywords" content="我的购物之旅"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"> 
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>LJC商城--angularjs练习</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div class="container" ng-controller="shopCtrl">
+			<div class="row">
+				<form class="form-control form form-inline">
+					<fieldset>
+						<legend>1604第一帅----杰哥商品购物系统</legend>
+						<div class="input-group input_info fr">
+							<input type="text" class="btn btn-default search_info" ng-model="search"  />
+							<select ng-model="showType" ng-options="item for item in showTypeArr" ng-click="getType(showType)" class="btn showType"></select>
+							<select ng-model="searchType" ng-options="item for item in shopType" ng-click="changeType()" class="btn showType"></select>
+							<select ng-model="sortType" ng-options="item for item in sortTypeArr" ng-click="getSortType(sortType)" class="btn showType"></select>
+							<mark class="sortBy" ng-class="{'active' : isActive}" ng-click="px('升序')">升序</mark>
+							<mark class="sortBy" ng-class="{'active' : !isActive}"  ng-click="px('降序')">降序</mark>
+						</div>
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr class="info">
+									<td>商品名称</td>
+									<td>商品单价</td>
+									<td>购买数量</td>
+									<td>收藏</td>
+									<td>库存数量</td>
+									<td>操作</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="items in shopInfo.shop | filter:rSearch(param) | orderBy:eSortType:sort" ng-show="isShow(items)"  class="getinfo-tr">
+									<td ng-bind="items.sname"></td>
+									<td ng-bind="items.price"></td>
+									<td>
+										<i class="fa fa-minus" ng-click="minusNum(items,$event)"></i>
+										<span ng-bind="items.buyNum" class="buyNum"></span>
+										<i class="fa fa-plus " ng-click="addNum(items,$event)"></i>
+									</td>
+									<td ng-bind="items.hot"></td>
+									<td ng-bind="items.allNum"></td>
+									<td><a href="javascript:;" class="add-shopcar" ng-click="goBuy(items)" >加入购物车</a></td>
+									<!--<td class="hidden-num shop-id" ng-bind="items.id"></td>-->
+									<!--<td class="hidden-num buy-num"></td>-->
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr class="success myshop">
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a href="html/cart.html" target="_blank" class="btn btn-info">我的购物车</a></td>
+								</tr>
+							</tfoot>
+						</table>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/lib/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/controllers.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/services.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/directives.js" type="text/javascript" charset="utf-8"></script>
+</html>

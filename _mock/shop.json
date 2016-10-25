@@ -1,0 +1,18 @@
+{
+	"shop" : [
+		{"sid" : "0","sname" : "农夫山泉","price" : 2,"allNum" : "100","buyNum" : "1","status" : 0,"hot" : 284,"group": "1"},
+		{"sid" : "1","sname" : "怡宝","price" : 2,"allNum" : "97","buyNum" : "1","status" : 0,"hot" : 245,"group": "1"},
+		{"sid" : "2","sname" : "康师傅","price" : 1.5,"allNum" : "302","buyNum" : "1","status" : 0,"hot" : 192,"group": "1"},
+		{"sid" : "3","sname" : "百岁山","price" : 2,"allNum" : "30","buyNum" : "1","status" : 0,"hot" : 95,"group": "1"},
+		{"sid" : "4","sname" : "冰露","price" : 2,"allNum" : 50,"buyNum" : 1,"status" : 0,"hot" : 78,"group": "1"},
+		{"sid" : "5","sname" : "农二哥","price" : 100,"allNum" : 10,"buyNum" : 1,"status" : 0,"hot" : 24,"group": "1"},
+		{"sid" : "6","sname" : "康师傅方便面","price" : 4.5,"allNum" : 85,"buyNum" : 1,"status" : 0,"hot" : 679,"group": "2"},
+		{"sid" : "7","sname" : "今麦郎弹面","price" : 5,"allNum" : 36,"buyNum" : 1,"status" : 0,"hot" : 325,"group": "2"},
+		{"sid" : "8","sname" : "统一方便面","price" : 4,"allNum" : 74,"buyNum" : 1,"status" : 0,"hot" : 578,"group": "2"},
+		{"sid" : "9","sname" : "苹果","price" : 5399,"allNum" : 100,"buyNum" : 1,"status" : 0,"hot" : 9751,"group": "3"},
+		{"sid" : "0","sname" : "三星","price" : 4988,"allNum" : 250,"buyNum" : 1,"status" : 0,"hot" : 10240,"group": "3"},
+		{"sid" : "11","sname" : "华为","price" : 3699,"allNum" : 300,"buyNum" : 1,"status" : 0,"hot" : 6478,"group": "3"},
+		{"sid" : "12","sname" : "小米","price" : 2455,"allNum" : 198,"buyNum" : 1,"status" : 0,"hot" : 5988,"group": "3"},
+		{"sid" : "13","sname" : "vivo","price" : 1998,"allNum" : 420,"buyNum" : 1,"status" : 0,"hot" : 5788,"group": "3"}
+	]
+}

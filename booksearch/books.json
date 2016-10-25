@@ -1,0 +1,13 @@
+{
+	"books":[
+		{"bookName":"水浒传","bookWriter":"施耐庵","bookPrice":"55","Delete":"删除","add":"编辑"},
+		{"bookName":"西游记","bookWriter":"吴承恩","bookPrice":"50","Delete":"删除","add":"编辑"},
+		{"bookName":"红楼梦","bookWriter":"曹雪芹","bookPrice":"40","Delete":"删除","add":"编辑"},
+		{"bookName":"三国演义","bookWriter":"罗贯中","bookPrice":"35","Delete":"删除","add":"编辑"}
+	],
+	"model":[
+		{"Delete":"删除成功"},
+		{"Add":"添加成功"},
+		{"Amend":"编辑成功"}
+	]
+}

@@ -1,0 +1,58 @@
+*{margin: 0;padding: 0;}
+button,input{outline: none;}
+#container{margin:0 auto;background: #ccc}
+#content table tr td{
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	vertical-align: middle;
+}
+#content table thead{
+	background: skyblue;
+	font-size: 20px;
+	font-weight: bolder;
+}
+#content table thead button{
+	border:0;
+	background: skyblue;
+	width: 100px;
+	height: 50px;
+	outline: none;
+}
+#content table tfoot{
+	font-size: 20px;
+	font-weight: bolder;
+	background: #09a800;
+}
+#content table tfoot tr td:nth-of-type(2){
+	text-align: right;
+	padding-right: 20px;
+}
+#content table tr td a{
+	color: red;
+	cursor: pointer;
+	text-decoration: none;
+}
+#search{
+	margin:10px;
+	padding-left: 10px;
+}
+.skyblue{
+	background: skyblue;
+}
+.formBox{
+	width: 280px;  
+	height: 320px;
+	background: green;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top:-160px;
+    margin-left: -150px;
+	border-radius : 20px;
+}
+.modal-body input{
+	margin:20px 40px;
+	width: 250px;
+}

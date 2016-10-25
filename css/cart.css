@@ -1,0 +1,15 @@
+.form{
+	height: auto;margin-top: 10px;
+}
+.table{
+	margin-top: 15px;
+	text-align: center;
+}
+.buyNum{
+	display: inline-block;
+	width: 50px;
+}
+.getinfo-tr i.fa{
+	padding: 5px 10px;
+	cursor: pointer;
+}

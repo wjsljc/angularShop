@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="cart">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="Description" content="我的购物车"/>	
+		<meta name="Keywords" content="我的购物车"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"> 
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>LJC商城-我的购物车</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/fontawesome/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/cart.css"/>
+	</head>
+	<body>
+		<div class="container" ng-controller="carCtrl">
+			<div class="row">
+				<form class="form-control form form-inline">
+					<fieldset>
+						<legend>我的购物车</legend>
+						<shoplist cart-obj="cartObj" my-event="ev"  delete-shop="deleteShop(items)" one-price="oneprice" cart-price="allMoney" check-all="checkAll" buy-all="buyAll(cartObj)" waring="waring()"></shoplist>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script src="../js/lib/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/app.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/controllers.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/services.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/directives.js" type="text/javascript" charset="utf-8"></script>
+</html>

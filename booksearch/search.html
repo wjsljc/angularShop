@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>搜索</title>
+	 <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+ 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="container">
+		<div ng-app="my-app">
+			<div ng-controller="content" id="content">
+				<!-- 添加新书 -->
+				<!-- 模态框（Modal） -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+									&times;
+								</button>
+								<h4 class="modal-title" id="myModalLabel">
+									{{modalBt}}
+								</h4>
+							</div>
+							<div class="modal-body">
+									书名：<input type="text" ng-model= "BookName"><br>
+									作者：<input type="text" ng-model= "BookWriter"><br>
+									价格：<input type="text" ng-model= "BookPrice"><br>
+									<!-- <button ng-click = "AmeendSure()">确认</button>
+									<button ng-click = "AmeendCancel()">取消</button> -->
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+								</button>
+								<button type="button" class="btn btn-primary" id="sureBtn" ng-click = "sureBtn()">
+									{{title}}
+								</button>
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal -->
+				</div>
+
+				<input type="text" placeholder="{{ty}}" ng-model="inputVal" id="search">
+				<button ng-click="changeType('bookName')" class="btn btn-primary" data-toggle="modal">书名</button>
+				<button ng-click="changeType('bookWriter')" class="btn btn-primary" data-toggle="modal">作者</button>
+				<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" ng-click="addBookBtn()">添加</button>
+
+				<table cellpadding="0" border="1" cellspacing="0" class="table table-striped">
+					<thead>
+						<tr>
+							<td>选择</td>
+							<td>序号</td>
+							<td><button ng-click="Name()">书名</button></td>
+							<td><button ng-click="Author()">作者</button></td>
+							<td><button ng-click="Price()">价格</button></td>
+							<td><button ng-click="Name()">操作</button></td>
+							<td><button ng-click="Amend()">修改</button></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat = "x in books | filter:typeFun(ty) | orderBy:order" ng-class="{'skyblue':$odd}">
+							<!-- 	orderBy:'bookName' 按书名排序
+									filter:'35.00'     选择价格有35.00的 -->
+							<td><input type="checkbox" ng-click = "checked()"></td>
+							<td>{{$index+1}}</td>
+							<td>{{x.bookName}}</td>
+							<td>{{x.bookWriter}}</td>
+							<td>￥{{x.bookPrice}}</td>
+							<td>
+								<button ng-click = "deleteBtn()" class="btn btn-warning">{{x.Delete}}</button>
+							</td>
+							<td>
+								<button ng-click = "amendBtn()"  class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+									<i class="glyphicon glyphicon-pencil"></i>  {{x.add}}
+								</button>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>总计</td>
+							<td colspan="6">￥{{AllPrice}}元</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/my.js"></script>
+	<script type="text/javascript" src="js/service.js"></script>
+</body>
+</html>
